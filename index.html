@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotline Pepper Products Map</title>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="index.js" defer type="module"></script>
+  </head>
+
+  <body>
+    <section class="widget-container">
+      <div class="categories">
+        <h3>Filter by category:</h3>
+        <div class="buttons">
+          <button id="useButton">Use</button>
+          <button id="tasteButton">Taste</button>
+          <button id="buyButton">Buy</button>
+          <button id="allButton">All</button>
+        </div>
+      </div>
+
+      <div class="map-container">
+        <div class="map-location-list"></div>
+
+        <div id="map"></div>
+      </div>
+    </section>
+
+    <!--
+    <script>
+        const getDataFromMap = async (place) => {
+
+
+            const encodedPlace = encodeURI(place);
+            const result = await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${encodedPlace}.json?access_token=pk.eyJ1Ijoic2V2aWxsYWluIiwiYSI6ImNrcXZrdXZmeDBmZDEzMG1odHZpb3JpMzYifQ.IbcQZ_mho52uAHWCA2057w`);
+            console.log(result.data.features[0].center);
+            console.log(result)
+
+        };
+    </script>-->
+  </body>
+</html>

@@ -1,0 +1,197 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+:root {
+    --use-button-color:#c1000e;
+    --taste-button-color:#5216b2;
+    --buy-button-color:#efae1d;
+    --all-button-color:#259e07;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+body{
+    display:grid;
+    place-items:center;
+    font-family:sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+.widget-container {
+    width:85%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap:1rem;
+}
+
+.map-container {
+    position:relative;
+    width:100%;
+    max-width:1200px;
+    height:700px;
+    overflow: hidden;
+    display:flex;
+    justify-content: stretch;
+    border-radius:5px;
+    box-shadow:0 0 10px 1px hsl(0, 0%, 85%);
+}
+
+#useButton {
+    background:var(--use-button-color);
+}
+
+#tasteButton {
+    background:var(--taste-button-color);
+}
+
+#buyButton {
+    background:var(--buy-button-color);
+}
+
+#allButton {
+    background:var(--all-button-color);
+}
+
+
+#useButton:hover, #useButton:focus {
+    outline:1px solid var(--use-button-color);
+    
+}
+
+#tasteButton:hover, #tasteButton:focus {
+    outline:1px solid var(--taste-button-color);
+}
+
+#buyButton:hover, #buyButton:focus {
+    outline:1px solid var(--buy-button-color);
+}
+
+#allButton:hover, #allButton:focus {
+    outline:1px solid var(--all-button-color);
+}
+
+
+.categories {
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    justify-content: start;
+    width:100%;
+    max-width:1200px;
+    padding: 0 1rem;
+}
+
+.categories button {
+    padding:0.5rem 1rem;
+    border:0;
+    color:white;
+    border-radius:5px;
+    outline-offset:2px;
+    transition:250ms ease;
+    margin-left:0.2rem;
+}
+
+.categories button:hover{
+    cursor:pointer;
+}
+
+
+@media screen and (max-width:850px){
+    .map-container{
+        flex-direction: column;
+    }
+
+    .categories {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.map-location-list {
+    flex-basis:35%;
+    background:white;
+    padding:1.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    scroll-behavior: smooth;
+}
+
+.map-location {
+    padding:1.2rem;
+    outline:1px solid hsl(0, 0%, 85%);
+    border-radius:6px;
+    display:grid;
+    gap:1rem;
+    transition:250ms ease;
+}
+
+.usage-list {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap:0.5rem;
+}
+
+.use-sauce {
+    padding:0.2rem 0.5rem;
+    border-radius:100vw;
+    color:white;
+    font-size:0.7rem;
+}
+
+.use {
+    background:var(--use-button-color);
+}
+
+.taste {
+    background:var(--taste-button-color);
+}
+
+.buy {
+    background:var(--buy-button-color);
+}
+
+.black{
+    color:hsl(0, 0%, 90%);
+    background:hsl(0, 0%, 5%);
+}
+
+.marker {
+    width:50px;
+    height:50px;
+    background-image:url("markerGeneral.png");
+    background-size:cover;
+}
+
+.marker-use {
+    background-image: url("markerUse.png");
+}
+
+.marker-taste {
+    background-image:url("markerTaste.png");
+}
+
+.marker-buy {
+    background-image:url("markerBuy.png");
+}
+
+#map {
+    flex-basis:65%;
+}
